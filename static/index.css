@@ -1,0 +1,301 @@
+:root{
+    --blue1: rgba(55, 117, 161, 1);
+    --blue2:rgba(69, 137, 186, 1);
+    --brown1:rgba(254, 219, 179, 1);
+    --white:white;
+    --black: black;
+    --font1: 'Lexend Deca';
+    --font2: 'League Spartan'
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    overflow: hidden;
+    margin: none;
+    padding: 0;
+}
+main{
+    position: relative;
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--white);
+}
+main .hero{
+   background-color:var(--blue1);
+   position: absolute;
+   width:100%;
+   height:100%;
+   clip-path: circle(61% at 16% 51%);
+   left: 0;
+  
+}
+main .content{
+    height: 100%;
+    width:100%;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    
+ }
+
+ .content-1{
+   width: 60%;
+   height:100%;
+   margin-left: 5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .content-2{
+   width: 40%;
+   height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+
+  .content-2 img{
+   aspect-ratio: 1/1;
+   width: 25em
+  }
+
+  .content-2 p{
+   margin-bottom:3em;;
+   text-align: center;
+   font-family: var(--font2);
+   font-size: 1.5rem;
+  }
+
+
+ .h-text{
+    width:100%;
+    height: 40%;
+    overflow: hidden;
+ }
+ .h-text h1{
+    color:var(--brown1);
+    font-size: 7rem;
+    font-family: var(--font2);
+ }
+ .h-text h2{
+    font-size: 2rem;
+    font-family: var(--font1);
+    color:var(--white);
+    margin-top: 9%;
+ }
+
+ .auth-buttons{
+    width:70%;
+    height:18em;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+ }
+ .auth-buttons p{
+    font-size: 0.9rem;
+    font-family: var(--font1);
+    color: var(--white);
+ }
+ .auth-buttons .iauth-buttons {
+   width:100%;
+   height:100%;
+   display: flex;
+   flex-direction: row;
+   margin-top: 2em;
+ }
+ .auth-buttons .iauth-buttons .login{
+   width: 50%;
+   height:100%;
+   border-right: 3px solid var(--blue2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+
+ .auth-buttons .iauth-buttons .login button{
+    width: 11em;
+    height:3.5em;
+    font-family: var(--font1);
+    color:var(--white);
+    background-color: transparent;
+    border:0.25em solid var(--white) ;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    border-radius: 0.5em;
+  }
+ .auth-buttons .iauth-buttons .login button:hover{
+    color:var(--blue1);
+    background-color: var(--white);
+    border:0.25em solid var(--white) ;
+    cursor: pointer;
+  }
+
+ .auth-buttons .iauth-buttons .sign-up{
+   width: 50%;
+   height:100%;
+ }
+
+ .auth-buttons .iauth-buttons .sign-up{
+   width: 50%;
+   height:100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 2em;
+   justify-content: center;
+ }
+
+ .auth-buttons .iauth-buttons .sign-up button{
+    width: 11em;
+    height:3.5em;
+    font-family: var(--font1);
+    color:var(--white);
+    background-color: transparent;
+    border:0.25em solid var(--white) ;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    border-radius: 0.5em;
+  }
+ .auth-buttons .iauth-buttons .sign-up button:hover{
+    color:var(--blue1);
+    background-color: var(--white);
+    border:0.25em solid var(--white) ;
+    cursor: pointer;
+  }
+  
+
+
+ 
+@media (max-width: 768px) {
+  
+   main .content{
+       height: 100%;
+       width:100%;
+       background-color:var(--blue1);
+       position: absolute;
+       display: flex;
+       flex-direction: row;
+       
+    }
+   
+    .content-1{
+      width: 90%;
+      height:100%;
+      margin-left: 1.5em;
+       margin-top: 7em;
+      
+    }
+   
+    .content-2{
+      opacity: 0.2;
+    }
+   
+   
+   
+    .h-text{
+       width:100%;
+       height: 40%;
+       overflow: hidden;
+    }
+    .h-text h1{
+       color:var(--brown1);
+       font-size: 5rem;
+       font-family: var(--font2);
+    }
+    .h-text h2{
+       font-size: 2rem;
+       font-family: var(--font1);
+       color:var(--white);
+       margin-top: 9%;
+    }
+   
+    .auth-buttons{
+       width:70%;
+       height:18em;
+       margin-top: -10%;
+    }
+    .auth-buttons p{
+       font-size: 0.9rem;
+    }
+    .auth-buttons .iauth-buttons {
+      width:100%;
+      height:100%;
+      display: flex;
+      flex-direction: row;
+      column-gap: 2em;
+      margin-top: 2em;
+    }
+    .auth-buttons .iauth-buttons .login{
+      width: 100%;
+      height:100%;
+      border-right: 3px solid var(--blue2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 1em;
+      
+    }
+   
+    .auth-buttons .iauth-buttons .login button{
+       width: 11em;
+       height:3.5em;
+       font-family: var(--font1);
+       color:var(--white);
+       background-color: transparent;
+       border:0.25em solid var(--white) ;
+       font-size: 0.9rem;
+       font-weight: bolder;
+       border-radius: 0.5em;
+     }
+    .auth-buttons .iauth-buttons .login button:hover{
+       color:var(--blue1);
+       background-color: var(--white);
+       border:0.25em solid var(--white) ;
+       cursor: pointer;
+     }
+   
+    .auth-buttons .iauth-buttons .sign-up{
+      width: 50%;
+      height:100%;
+    }
+   
+    .auth-buttons .iauth-buttons .sign-up{
+      width: 50%;
+      height:100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 2em;
+      justify-content: center;
+    }
+   
+    .auth-buttons .iauth-buttons .sign-up button{
+       width: 11em;
+       height:3.5em;
+       font-family: var(--font1);
+       color:var(--white);
+       background-color: transparent;
+       border:0.25em solid var(--white) ;
+       font-size: 0.9rem;
+       font-weight: bolder;
+       border-radius: 0.5em;
+     }
+    .auth-buttons .iauth-buttons .sign-up button:hover{
+       color:var(--blue1);
+       background-color: var(--white);
+       border:0.25em solid var(--white) ;
+       cursor: pointer;
+     }
+}

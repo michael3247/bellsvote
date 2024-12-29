@@ -1,0 +1,69 @@
+{% extends "layout3.html" %}
+{% block main %}
+<div class="startElec">
+    <div class="elecCont">
+        <p class="error">{{ err_message }}</p>
+        <form action="/startElec" method="post">
+            <div class="innerCont">
+                <p>Input Post:</p>
+                <div>
+                    <select name="post" >
+                        <option value="" disabled selected>--select post--</option>
+                        <option value="BUESA pro">BUESA pro</option>
+                        <option value="BUSA president">BUSA president</option>
+                        <option value="Tech pro">Tech pro</option>
+                    </select>
+                    <input name="post" type="text" placeholder="--custom post"/>
+                </div>
+            </div>
+    
+            <div class="innerCont">
+                <p>Input Time:</p>
+                <div>
+                    <input type="datetime-local"  name="start" required/>
+                    <input type="datetime-local" name="end" required/>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button>Create</button>
+            </div>
+           
+        </form>
+    </div>
+
+    {% for i in election %}
+            
+    <div class="elecCont">
+        <form action="/beginElec" method="get">
+            <div class="innerCont">
+                <p>Post:</p>
+                <div>
+                    <p>{{ i.post }}</p>
+                </div>
+            </div>
+    
+            <div class="innerCont">
+    
+                <div>
+                    <p>Start Time: {{  i.startTime.split('T')[0] }}--{{  i.startTime.split('T')[1] }}</p>
+                </div>
+                
+                <div>
+                    <p>End Time: {{  i.endTime.split('T')[0] }}--{{  i.endTime.split('T')[1] }}</p>
+                    
+                </div>
+                
+            </div>
+            <input type="hidden" name="id" value="{{ i.Id }}" />
+            <div class="submit">
+                <button type="submit">Start</button>
+            </div>
+           
+        </form>
+    </div>
+    {% endfor %}
+
+
+</div>
+{% endblock %}

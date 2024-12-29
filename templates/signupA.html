@@ -1,0 +1,51 @@
+{% extends "layout1.html" %}
+{% block content1 %}
+<div class="a_signup">
+    <h1>Sign-up</h1>
+    <div class="inputs">
+        <p class="err">{{ err_message }}</p>
+        <form action="/a_signup" method="post">
+            <div>
+                <p>First name:</p><br>
+                <input type="text" name="firstName" required placeholder="firstName">
+            </div>
+            <div>
+                <p>Last name:</p><br>
+                <input type="text" name="lastName" required placeholder="lastName">
+            </div>
+            <div>
+                <p>Email:</p><br>
+                <input type="email" name="email" required placeholder="email">
+            </div>
+            <div>
+                <p>Office</p><br>
+                <select name="office">
+                    <option value="" disabled selected>--select--</option>
+                    <option value="Office of the Vice-Chancellor">Office of the Vice-Chancellor</option>
+                    <option value="Deans of Colleges">Deans of Colleges</option>
+                    <option value="Heads of Departments">Heads of Departments</option>
+                    <option value="Registrar's Office">Registrar's Office</option>
+                    <option value="Bursar's Office">Bursar's Office</option>
+                    <option value="Directorate of Academic Planning and Quality Assurance">Directorate of Academic Planning and Quality Assurance</option>
+                    <option value="Library Services">Library Services</option>
+                    <option value="Corporate Affairs and Public Relations">Corporate Affairs and Public Relations</option>
+                    <option value="Student Affairs Division">Student Affairs Division</option>
+                    <option value="ICT and E-Learning Services">ICT and E-Learning Services</option>
+                    <option value="Teaching Staff">Teaching Staff</option>
+                </select>
+            </div>
+            <div>
+                <p>Password</p><br>
+                <input type="password" name="password" required >
+            </div>
+            <div>
+                <p>Confirm Password</p><br>
+                <input type="password" name="passwordConf" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

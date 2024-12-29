@@ -1,0 +1,27 @@
+{% extends "layout2.html" %}
+{% block main %}
+<div class="activeElec">
+   
+    <div class="acct">
+        <h2>User Data</h2>
+
+        <p>first name: {{ user[0].firstName }}</p>
+        <p>Last name: {{ user[0].lastName }}</p>
+        <p>Email: {{ user[0].email }}</p>
+        <p>Matric: {{ user[0].matric }}</p>
+        <p>Department: {{ user[0].lastName }}</p>
+        <p>College: {{ user[0].college }}</p>
+        <p>Level: {{ user[0].level }}</p>
+        
+        <h2>Account Control</h2>
+        <a href="/login" class="logout">Logout</a><br>
+        <form method="post" action="/acctS" onsubmit="return confirm('Are you sure you want to delete your account?');">
+            
+            <button class="delete">Delete Account</button>
+        </form>
+    </div>
+
+</div>
+
+    
+{% endblock %}

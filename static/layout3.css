@@ -1,0 +1,774 @@
+:root{
+    --blue1: rgba(55, 117, 161, 1);
+    --blue2:rgba(69, 137, 186, 1);
+    --blue3:rgba(20, 43, 59, 1);
+    --brown1:rgba(254, 219, 179, 1);
+    --white:white;
+    --white2: rgba(224, 224, 224, 1);
+    --black: black;
+    --font1: 'Lexend Deca';
+    --font2: 'League Spartan'
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    overflow: hidden;
+    margin: none;
+    padding: 0;
+    background-color: var(--white2);
+}
+main{
+    position: relative;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 8em;
+    height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+    overflow-y:auto;
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+    display: none; /* Safari, Chrome, Opera */
+  }
+
+nav{
+    height:3em;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white2);
+}
+
+nav .logo {
+   margin-left: 2%;
+}
+nav .logo img{
+    aspect-ratio: 1/1;
+    width:3.4em;
+}
+
+nav .links {
+    color: var(--var);
+    width:70%;
+}
+nav .links a{
+    color: var(--black);
+    text-decoration: none;
+    font-family: var(--font1);
+    font-size: 0.9rem;
+    margin-right:3%;
+}
+
+nav .links a:hover{
+    color: var(--blue2);
+}
+.nav2{
+    display: none;
+}
+.panelS{
+    margin-top: 4em;
+}
+.panelS .info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    
+}
+.panelS .info .info1{
+    border-radius: 1em;
+    width: 50%;
+    height: 13em;
+    padding: 0 3em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--blue1);
+    
+}
+.panelS .info .info1 img{
+    aspect-ratio: 1/1;
+    width:8em;
+    border-radius: 50%;
+    border: 0.3em solid var(--white);
+}
+
+.panelS .info .info1 .text{
+    margin-left: 15%;
+    color: var(--white);
+    font-family: var(--font1);
+}
+
+.panelS .info .info1 .text .first{
+    font-size: 1.5rem;
+}
+
+.panelS .info .info2{
+    border-radius: 1em;
+    width: 30%;
+    height: 13em;
+    padding: 0 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    color: var(--blue1);
+    font-family: var(--font1);
+    
+}
+
+.panelS .info .info2 .first{
+    font-size: 1.5rem;
+
+}
+
+.active-elec{
+    width:100%;
+    height: fit-content;
+    font-size: 0.2rem;
+    margin-top: 20em;
+    
+}
+
+.active-elec p{    
+    color: var(--blue1);
+    font-size: 1.5rem;
+    font-family: var(--font1);
+}
+.active-elec .elec-cont { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    column-gap: 3%;
+    height:fit-content
+}
+.active-elec div .elec{ 
+    border-radius: 4em;
+    font-size: 0.2rem;
+    padding-left: 1%;
+    width:75em;
+    height:45em;
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(var(--blue1), var(--blue3));
+}
+.active-elec div .elec p{  
+    font-size: 0.8rem;
+    color: var(--white);
+}
+.active-elec div .elec .first{  
+    font-size: 1.3rem;
+}
+
+.navigation{
+    margin-top: 5em;
+}
+.navigation {
+    font-size: 1rem;
+    color: var(--blue1);
+    font-family: var(--font1);
+}
+
+.startElec {
+    width:100%;
+    height:fit-content;
+    overflow-x:hidden ;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+}
+
+.startElec .elecCont{
+    margin-top: 5em;
+    border: 0.3em solid var(--blue1);
+    width: 55em;
+    height: 20em;
+    padding: 2em;
+    overflow: hidden;
+    
+}
+
+.startElec .elecCont .error{
+    font-size: 0.8rem;
+    color: red;
+}
+
+.startElec .elecCont p{
+    font-size: 1.5rem;
+    color: var(--blue1);
+    font-family: var(--font1);
+}
+
+.startElec .elecCont .innerCont{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.5em;
+}
+
+.startElec .elecCont .submit{
+    margin-top: 2em;
+    width:100%;
+    justify-content: center;
+    display: flex;
+
+    
+}
+
+
+.startElec .elecCont .submit button{
+    border: 0.15em solid var(--blue1);
+    background-color: none;
+    border-radius: 0.3em;
+    font-family: var(--font1);
+    background-color: transparent;
+    font-size: 1.3rem;
+    width: 15em;
+    padding: 1.3 0;
+    color: var(--blue1);
+}
+
+.startElec .elecCont .submit button:hover{
+    background-color: var(--white);
+    border: 0.15em solid var(--white);
+}
+
+.startElec .elecCont div div{
+    display: flex;
+    flex-direction: row;
+}
+.startElec .elecCont div input, .startElec .elecCont div select{
+    width: 20em;
+    height: 3em;
+    margin-left: 1em;
+    border: none;
+    background-color: var(--white);
+    
+}
+
+.activeElec{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 5em;
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.activeElec::-webkit-scrollbar {
+display: none; /* Safari, Chrome, Opera */
+}
+
+.activeElec .elect{
+    background-color: var(--blue1);
+    width:60em;
+    height: fit-content;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+.activeElec .elect p{
+    color: var(--white);
+    font-family: var(--font1);
+    font-size: 1.3rem;
+}
+
+.activeElec .elect .elecInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+} 
+.activeElec .elect .elecInfo p{
+    color: var(--white);
+    font-family: var(--font1);
+    font-size: 1.3rem;
+} 
+.activeElec .acct{
+    margin-top: 2em;
+    width:65vw;
+    color:white;
+    padding:2em;
+    background-color:var(--blue1);
+    font-family: var(--font1);
+}
+
+.activeElec .acct h2{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.activeElec .acct .logout{
+    color: white;
+    background-color: transparent;
+    font-family: var(--font1);
+    font-size: 1rem;
+    padding:0.25em 2em;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    border: 0.2rem solid var(--white);
+}
+.activeElec .acct .logout:hover{
+    background-color: var(--white);
+    color: var(--blue1);
+}
+
+.activeElec .acct .delete{
+    color: white;
+    background-color: transparent;
+    font-family: var(--font1);
+    font-size: 1rem;
+    padding:0.25em 2em;
+    border-radius: 0.3rem;
+    border: 0.2rem solid red;
+    margin-top: 1.5em;
+}
+.activeElec .acct .delete:hover{
+    background-color: red;
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--white);
+    font-family: var(--font1);
+    font-size: 1rem;
+   
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color:var(--blue1);
+}
+tr button{
+    color: white;
+    background-color: transparent;
+    font-family: var(--font1);
+    font-size: 1rem;
+    padding:0.25em 2em;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--white);
+}
+tr button:hover{
+    background-color: var(--white);
+    color: var(--blue1);
+}
+tr button:disabled:hover{
+    background-color: transparent;
+    color: var(--white);
+}
+tr:nth-child(even) {
+    background-color: var(--blue1);
+}
+tr:nth-child(odd) {
+    background-color:var(--blue4);
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    main{
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 8em;
+        height: 100vh;
+        
+    }
+    
+    nav{
+        height:3em;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white2);
+        
+    }
+    
+    nav .logo {
+       margin-left: 2%;
+    }
+    nav .logo img{
+        aspect-ratio: 1/1;
+        width:3.4em;
+    }
+    
+    nav .links {
+        color: var(--var);
+        width:70%;
+        display: none;
+    }
+    nav .links a{
+        color: var(--black);
+        text-decoration: none;
+        font-family: var(--font1);
+        font-size: 0.9rem;
+        margin-right:3%;
+    }
+    
+    nav .links a:hover{
+        color: var(--blue2);
+    }
+    .nav2{
+        display: inline;
+        margin-right: 1em;
+        position: relative;
+    }
+    
+    .nav2 .bars{
+       font-size: 2rem;
+       background-color: transparent;
+       border: none;
+    }
+    .nav2 .barOpp{
+        position: absolute;
+       z-index: 2;
+       background-color: var(--blue1);
+       width:20em;
+       height: 20em;
+       margin-left: -250%;
+       padding-left: 1em;
+       display:none;
+       flex-direction: column;
+    }
+    .nav2 .barOpp a{
+        color: white;
+        text-decoration: none;
+        font-family: var(--font1);
+        background-color: transparent;
+        padding: 1em 0;
+        width:100%;
+    }
+    .panelS{
+        margin-top: 4em;
+    }
+    .panelS .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+        
+    }
+    .panelS .info .info1{
+        border-radius: 1em;
+        width: 100%;
+        height: 13em;
+        padding: 0 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        background-color: var(--blue1);
+        overflow: hidden;
+        
+    }
+    .panelS .info .info1 img{
+        aspect-ratio: 1/1;
+        width:6em;
+        border-radius: 50%;
+        border: 0.3em solid var(--white);
+    }
+    
+    .panelS .info .info1 .text{
+        margin-left: 9%;
+        color: var(--white);
+        font-family: var(--font1);
+    }
+    
+    .panelS .info .info1 .text .first{
+        font-size: 1.5rem;
+    }
+    
+    .panelS .info .info2{
+        border-radius: 1em;
+        width: 100%;
+        height: 13em;
+        padding: 0 1em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--white);
+        color: var(--blue1);
+        font-family: var(--font1);
+        overflow: hidden;
+        
+    }
+    
+    .panelS .info .info2 .first{
+        font-size: 1.5rem;
+    
+    }
+    
+    .active-elec{
+        width:100%;
+        height: fit-content;
+        font-size: 0.2rem;
+        margin-top: 20em;
+        
+    }
+    
+    .active-elec p{    
+        color: var(--blue1);
+        font-size: 1.5rem;
+        font-family: var(--font1);
+    }
+    .active-elec .elec-cont { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:100%;
+        column-gap: 3%;
+        height:fit-content;
+        justify-content: center;
+    }
+    .active-elec div .elec{ 
+        border-radius: 4em;
+        font-size: 0.2rem;
+        padding-left: 1%;
+        width:75em;
+        height:45em;
+        margin-top: 8em;
+        overflow: hidden;
+        background: linear-gradient(var(--blue1), var(--blue3));
+    }
+    .active-elec div .elec p{  
+        font-size: 0.8rem;
+        color: var(--white);
+    }
+    .active-elec div .elec .first{  
+        font-size: 1.3rem;
+    }
+    
+    .navigation{
+        margin-top: 5em;
+    }
+    .navigation {
+        font-size: 1rem;
+        color: var(--blue1);
+        font-family: var(--font1);
+    }
+    
+    .startElec {
+        width:100%;
+        height:fit-content;
+        overflow-x:hidden ;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2em;
+      
+    }
+    
+    .startElec .elecCont{
+        margin-top: 5em;
+        border: 0.3em solid var(--blue1);
+        width: 90%;
+        height: 25em;
+        padding: 2em;
+        overflow: hidden;
+        overflow-y: auto;
+        
+    }
+    
+    
+    .startElec .elecCont .innerCont{
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1.5em;
+    }
+    
+    .startElec .elecCont .submit{
+        margin-top: 2em;
+        width:100%;
+        justify-content: center;
+        display: flex;
+    
+        
+    }
+    
+    
+    .startElec .elecCont .submit button{
+        border: 0.15em solid var(--blue1);
+        background-color: none;
+        border-radius: 0.3em;
+        font-family: var(--font1);
+        background-color: transparent;
+        font-size: 1.3rem;
+        width: 15em;
+        padding: 1.3 0;
+        color: var(--blue1);
+    }
+    
+    .startElec .elecCont .submit button:hover{
+        background-color: var(--white);
+        border: 0.15em solid var(--white);
+    }
+    
+    .startElec .elecCont div div{
+        display: flex;
+        flex-direction:column;
+        row-gap: 1em;
+    }
+    .startElec .elecCont div input, .startElec .elecCont div select{
+        width: 14em;
+        height: 3em;
+        margin-left: 1em;
+        border: none;
+        background-color: var(--white);
+        
+    }
+    
+    .activeElec{
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        padding-bottom: 5em;
+    }
+    
+    
+    .activeElec .elect{
+        width:100%;
+        height: fit-content;
+        padding: 2em;
+        margin-top: 2em;
+        margin-bottom: 3em;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .activeElec .elect p{
+        color: var(--white);
+        font-family: var(--font1);
+        font-size: 1.3rem;
+    }
+    
+    .activeElec .elect .elecInfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:100%;
+    } 
+    .activeElec .elect .elecInfo p{
+        color: var(--white);
+        font-family: var(--font1);
+        font-size: 1.3rem;
+    } 
+    .activeElec .acct{
+        margin-top: 5em;
+        width:100%;
+        color:white;
+        padding:2em;
+        background-color:var(--blue1);
+        font-family: var(--font1);
+    }
+    
+    .activeElec .acct h2{
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+    
+    .activeElec .acct .logout{
+        color: white;
+        background-color: transparent;
+        font-family: var(--font1);
+        font-size: 1rem;
+        padding:0.25em 2em;
+        border-radius: 0.3rem;
+        text-decoration: none;
+        border: 0.2rem solid var(--white);
+    }
+    .activeElec .acct .logout:hover{
+        background-color: var(--white);
+        color: var(--blue1);
+    }
+    
+    .activeElec .acct .delete{
+        color: white;
+        background-color: transparent;
+        font-family: var(--font1);
+        font-size: 1rem;
+        padding:0.25em 2em;
+        border-radius: 0.3rem;
+        border: 0.2rem solid red;
+        margin-top: 1.5em;
+    }
+    .activeElec .acct .delete:hover{
+        background-color: red;
+        
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: var(--white);
+        font-family: var(--font1);
+        font-size: 1rem;
+       
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color:var(--blue1);
+    }
+    tr button{
+        color: white;
+        background-color: transparent;
+        font-family: var(--font1);
+        font-size: 1rem;
+        padding:0.25em 2em;
+        border-radius: 0.3rem;
+        border: 0.2rem solid var(--white);
+    }
+    tr button:hover{
+        background-color: var(--white);
+        color: var(--blue1);
+    }
+    tr button:disabled:hover{
+        background-color: transparent;
+        color: var(--white);
+    }
+    tr:nth-child(even) {
+        background-color: var(--blue1);
+    }
+    tr:nth-child(odd) {
+        background-color:var(--blue4);
+    }
+
+}

@@ -1,0 +1,55 @@
+{% extends "layout2.html" %}
+{% block main %}
+<div class="navigation">
+    
+    <section>
+        <h2>For Student Users</h2>
+        <p>As a Student, you can participate in elections, view your account details, and vote for candidates in active elections.</p>
+
+        <h3>1. Login</h3>
+        <p>Login using either your email or matric number:</p>
+        <ul>
+            <li><strong>Email Login</strong> </li>
+            <li><strong>Matric Number Login</strong></li>
+        </ul>
+
+        <h3>2. Dashboard (Student)</h3>
+        <p>Once logged in, you will be redirected to the Student Dashboard, where you can access the following:</p>
+        <ul>
+            <li><strong>Active Elections</strong>: View and participate in ongoing elections by selecting candidates to vote for. You can also see the election's post, start, and end time.</li>
+            <li><strong>Vote for Candidates</strong>: In the "Active Elections" section, you can vote for candidates. You can unvote if you wish to change your vote before the election ends.</li>
+            <li><strong>View Results</strong>: Access election results through the "Results" link. View vote counts and winners for each completed election.</li>
+        </ul>
+
+        <h3>3. Account Control</h3>
+        <p>Students can view and manage their account details:</p>
+        <ul>
+            <li><strong>Logout</strong>: Log out by clicking "Logout" in your account settings.</li>
+            <li><strong>Delete Account</strong>: You can request to delete your account from the "Account" page. A confirmation prompt will ensure this action is intentional.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Common Features for Both Admins and Students</h2>
+
+        <h3>Navigation Bar</h3>
+        <p>The navigation bar provides quick access to key sections of the portal:</p>
+        <ul>
+            <li><strong>Dashboard</strong>: Admins see their control panel; students view active elections.</li>
+            <li><strong>Active Elections</strong>: View and vote in ongoing elections.</li>
+            <li><strong>Results</strong>: View results of completed elections.</li>
+            <li><strong>Account</strong>: View and manage your account settings.</li>
+        </ul>
+
+        <h3>Time Format for Elections</h3>
+        <p>Elections have a clear start and end time. You can only vote during the active period. Once voting ends, no further votes can be cast.</p>
+
+        <h3>Important Notes:</h3>
+        <ul>
+            <li><strong>Election Integrity</strong>: Ensure you vote only during the active election period.</li>
+            <li><strong>Voting Restriction</strong>: Each user can vote only once per election.</li>
+            <li><strong>Data Privacy</strong>: User data, including votes, is secure and kept confidential.</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

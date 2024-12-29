@@ -1,0 +1,61 @@
+{% extends "layout3.html" %}
+{% block main %}
+<div class="activeElec">
+   
+    <div class="elect">
+        
+        <p>Administrators</p>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Office</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in admin %}
+                    <tr>
+                        <td>{{ i.firstName }} {{ i.lastName }}</td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.office }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   
+    <div class="elect">
+        
+        <p>Students</p>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Matric</th>
+                        <th>Level</th>
+                        <th>College</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in students %}
+                    <tr>
+                        <td>{{ i.firstName }} {{ i.lastName }}</td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.matric }}</td>
+                        <td>{{ i.level }}</td>
+                        <td>{{ i.college }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

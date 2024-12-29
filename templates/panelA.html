@@ -1,0 +1,45 @@
+{% extends "layout3.html" %}
+{% block main %}
+<div class="panelS">
+    <div class="info">
+        <div class="info1">
+            <div>
+                <img src="./static/person.png" alt="person" />
+            </div>
+            <div class="text">
+                <p class="first">Personal Info:</p><br>
+                <p>First name: {{ user[0].firstName }}</p>
+                <p>Last name: {{ user[0].lastName }}</p>
+                <p>Email: {{ user[0].email }}</p>
+            </div>
+        </div>
+        <div class="info2">
+            <p class="first">School Info:</p><br>
+            <p>Office: {{ user[0].office }}</p>
+            <p>Account type: Administrator</p><br>
+        </div>
+    </div>
+    <div class="active-elec">
+        <p>Active-Elections</p>
+        <div class="elec-cont">
+
+            {% for i in election %}
+            <div class="elec">
+                <p class="first">{{ i.post }}</p><br>
+                <p>start-time: {{  i.startTime.split('T')[1] }}</p><br>
+                <p>start-date: {{  i.startTime.split('T')[0] }}</p><br>
+                <p>end-time: {{  i.endTime.split('T')[1] }}</p><br>
+                <p>start-date: {{  i.endTime.split('T')[0] }}</p><br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <p></p>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

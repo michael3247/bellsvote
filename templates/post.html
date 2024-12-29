@@ -1,0 +1,18 @@
+{% extends "layout2.html" %}
+{% block main %}
+<div class="post">
+    <div>
+        <p>Open Posts:</p>
+
+        {% for i in election %}
+        <div>
+            <p>Post: {{ i.post }}</p>
+            <form action="/contest">
+                <input type="hidden" name="elecId" value="{{ i.Id }}" />
+                <button type="submit" {% if i.Id in contestedIds %}disabled{% endif %} >{% if i.Id in contestedIds %}Entered{% else %}Contest{% endif %}</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

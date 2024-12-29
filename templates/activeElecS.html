@@ -1,0 +1,38 @@
+{% extends "layout2.html" %}
+{% block main %}
+<div class="activeElec">
+    {% for i in elecCand %}
+    <div class="elect">
+        <div class="elecInfo">
+            <p><b>Position: </b>{{ i.election.post }}</p>
+            <p>Start: {{  i.election.startTime.split('T')[0] }} ---  {{  i.election.startTime.split('T')[1] }} <br> End: {{  i.election.endTime.split('T')[0] }} ---  {{  i.election.endTime.split('T')[1] }}</p>
+        </div>
+        <p>Candidates:</p>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Votes</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for j in i.candidates %}
+                    <tr>
+                        <form method="post" action="/activeElecS">
+                            <input type="hidden" name="candId" value="{{ j.candidateRow.user }}" />
+                            <input type="hidden" name="elecId" value="{{ i.election.Id }}" />
+                            <td>{{ j.user.firstName }}</td>
+                            <td>{{ j.candidateRow.votes }}</td>
+                            <td><button type="submit">{% if voted or i.election.Id in vote  %}Unvote{% else %}Vote{% endif %}</button></td>
+                        </form>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+    
+{% endblock %}

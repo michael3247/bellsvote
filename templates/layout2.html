@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/layout2.css" rel="stylesheet" />
+    <link href="/static/icon.png" rel="icon"> 
+    <link href='https://fonts.googleapis.com/css?family=Lexend Deca|League Spartan' rel='stylesheet'>
+    <title>BellsVote</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/7cc0998fb0.js" crossorigin="anonymous"></script>
+    <nav>
+        <div class="logo">
+            <img src="./static/icon.png" alt="logo">
+        </div>
+        <div class="links">
+            <a href="/s_panel">Dashboard</a>
+            <a href="/activeElecS">Active-Elections</a>
+            <a href="resultS">Results</a>
+            <a href="/post">Posts</a>
+            <a href="/acctS">Account</a>
+            <a href="s_navigation">Navigation</a>
+        </div>
+        <div class="nav2">
+           <button class="bars"><i class="fa-solid fa-bars"></i></button>
+            <div class="barOpp">
+                <a href="/s_panel">Dashboard</a>
+                <a href="/activeElecS">Active-Elections</a>
+                <a href="resultS">Results</a>
+                <a href="/post">Posts</a>
+                <a href="/acctS">Account</a>
+                <a href="s_navigation">Navigation</a>
+            </div>
+           
+        </div>
+    </nav>
+   <main>
+    {% block main %}{% endblock %}
+   </main>
+   <script>
+    const element1 = document.getElementsByClassName("bars")[0]; 
+    const element2 = document.getElementsByClassName("barOpp")[0]; 
+
+    element1.addEventListener('click', () => {
+        // Toggle visibility of the menu
+        if (element2.style.display === 'none' || element2.style.display === '') {
+            element2.style.display = 'flex';
+        } else {
+            element2.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

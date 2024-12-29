@@ -1,0 +1,26 @@
+{% extends "layout1.html" %}
+{% block content1 %}
+<div class="login">
+    <h1>Login</h1>
+    <div class="inputs">
+        <p class="err">{{ err_message }}</p>
+        <form action="/login" method="post">
+            <div>
+                <p>Email:</p><br>
+                <input type="text" name="email" required>
+            </div>
+            <div>
+                <p>Password:</p><br>
+                <input type="password" name="password" required><br>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    
+        <form action="/m_login">
+            <button type="submit" class="button2">Login with Matric No</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

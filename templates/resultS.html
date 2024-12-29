@@ -1,0 +1,35 @@
+{% extends "layout2.html" %}
+{% block main %}
+<div class="activeElec">
+    <div class="elect">
+        
+        <p>Offices:</p>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Votes</th>
+                        <th>Office</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in election_top_candidates %}
+                    <tr>
+                        <form method="post" action="/activeElecS">
+                            <input type="hidden" name="candId" value="{{ i.user_id }}" />
+                            <input type="hidden" name="elecId" value="{{ i.election_id }}" />
+                            <td>{{ i.user_details.firstName }}</td>
+                            <td>{{ i.votes }}</td>
+                            <td>{{ i.election_post }}</td>
+                            <td>Elected</td>
+                        </form>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout3.html" %}
+{% block main %}
+<div class="navigation">
+    <section>
+        <h2>For Admin Users</h2>
+        <p>As an Admin, you have special privileges to manage elections, view results, control user accounts, and oversee the voting process.</p>
+
+        <h3>1. Login</h3>
+        <p>Login using your email:</p>
+
+        <h3>2. Admin Dashboard</h3>
+        <p>Once logged in, you will be redirected to the Admin Dashboard. The key functionalities here are:</p>
+        <ul>
+            <li><strong>Post Creation</strong>: Create new elections by selecting a predefined post or providing a custom one. Set the start and end times for the election.</li>
+            <li><strong>Managing Elections</strong>: You can view and manage active elections. Admins can start elections, view details, and manage candidates.</li>
+            <li><strong>User Management</strong>: Admins can view all accounts through the "Users" section.</li>
+            <li><strong>Results</strong>: View results of completed elections via the "Results" link.</li>
+        </ul>
+
+        <h3>3. Active Elections</h3>
+        <p>Admins can view ongoing elections and remove candidates if necessary. The "Remove" button allows you to remove candidates from the election.</p>
+
+        <h3>4. Account Control</h3>
+        <p>As an Admin, you can:</p>
+        <ul>
+            <li><strong>Logout</strong>: Click "Logout" to exit your account.</li>
+            <li><strong>Delete Account</strong>: Admins can delete their accounts through the "Delete Account" button in the Account section. This action is irreversible.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Common Features for Both Admins and Students</h2>
+
+        <h3>Navigation Bar</h3>
+        <p>The navigation bar provides quick access to key sections of the portal:</p>
+        <ul>
+            <li><strong>Dashboard</strong>: Admins see their control panel; students view active elections.</li>
+            <li><strong>Active Elections</strong>: View and vote in ongoing elections.</li>
+            <li><strong>Results</strong>: View results of completed elections.</li>
+            <li><strong>Account</strong>: View and manage your account settings.</li>
+        </ul>
+
+        <h3>Time Format for Elections</h3>
+        <p>Elections have a clear start and end time. You can only vote during the active period. Once voting ends, no further votes can be cast.</p>
+
+        <h3>Important Notes:</h3>
+        <ul>
+            <li><strong>Election Integrity</strong>: Ensure you vote only during the active election period.</li>
+            <li><strong>Voting Restriction</strong>: Each user can vote only once per election.</li>
+            <li><strong>Data Privacy</strong>: User data, including votes, is secure and kept confidential.</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}
