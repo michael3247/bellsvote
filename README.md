@@ -1,3 +1,5 @@
+<img src="/static/icon.png" alt="BellsVote Dashboard" width="200">
+
 # BellsVote
 
 bellsvote is a Flask-based web application for managing student elections. The platform allows students to view elections, cast their votes, and access results, while administrators can create, manage, and monitor elections.
